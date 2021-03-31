@@ -2,20 +2,28 @@
     padding: 0;
     margin: 0;
 }
+
 header{
     background-color: gray;
 
 }
+
 .homepage-head img{
 max-width: 1452px;
 max-height: 640px;
-padding: 200px 150px 0 150px;
+padding: 100px 150px 0 150px;
 width: 100%;
 }
 /* .navbar .quotes{
     background-color: rgb(255, 115, 0);
     padding: 1rem 0;
 } */
+.shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+}
+ 
 .navbar-brand img{
     max-height: 45px;
     max-width: 79px;
@@ -23,8 +31,13 @@ width: 100%;
 
 .navbar .navbar-nav .nav-item a{
     padding: 0 50px;
+    font-weight: bold;
+    color: black;
 }
 
+  #navbar a:hover {
+    color: #DB2E00;
+  }
 .quotes{
     background-color: #DB2E00;
     padding-left: 10px;
@@ -44,9 +57,9 @@ width: 100%;
     justify-content: space-between;
     padding:0px 0px; 
 }
-@media only screen and (max-width: 1024px){
+@media  (min-width: 769px) and (max-width: 1900px){
     .navbar .navbar-nav .nav-item a{
-        padding: 0 30px;
+        padding: 0 50px;
     }
 }
 @media only screen and (max-width: 768px){
@@ -191,22 +204,55 @@ width: 100%;
     max-height: auto;
     background: url('../img/bg-2.png');
 }
+.wow{
+    visibility: hidden;
+ }
+ .plans
   .fixed-background .row .col-md-4{
-    padding: 3rem 0;
+    padding: 4rem 0;
     text-align: center;
   }
-  
+  .plans p span{
+      color: #DB2E00;
+      font-size: 1.5rem;
+  }
   .fixed-background  .row .col-md-4{
     
     color: black;
     
+    
   }
+  
   .fixed-background  .row .col-md-4 img{
     max-width: 91px;
     max-height: 91px;
-
+    
   }
-
+  .fixed-background  .row .col-md-4 .plans-img{
+    animation-name: stretch;
+    animation-duration: 3s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: 3;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    
+  }
+  @keyframes stretch {
+    0% {
+      transform: scale(.3);
+    
+      border-radius: 100%;
+    }
+    50% {
+      
+    }
+    100% {
+      transform: scale(1.1);
+     
+    }
+  }
   .fixed-background  .row .col-md-4 h4{
     margin: .5rem 0;
   }
@@ -223,11 +269,22 @@ padding: 1px 20px;
     max-width: 1920px;
     max-height: auto;
     background: url('../img/BG1.png');
+    
 }
+
+  
 .industry .row .col-md-4 img{
     max-width: 94px;
     max-height: 101px;
+    text-align: center;
+    
 }
+.industry .fixed-background .row .col-md-4 {
+    color: black;
+    padding: 4rem 0;
+    text-align: center;
+}
+  
 .portfolio{
     max-width: 1920px;
     max-height: 1500px;
@@ -280,7 +337,12 @@ padding: 1px 20px;
     padding: 5px 10px;
     color: #fff;
     margin: 5px 0;
+    animation: 3s linear 1s 5 running btn;
 }
+@keyframes btn {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
 .project .content button a{
     text-decoration: none;
     color: #fff;
@@ -348,8 +410,12 @@ padding: 1px 20px;
 color: #fff;
 background-color: #fff;
 text-align: center;
-
+animation: 3s linear 1s 5 running slideout;
 }
+@keyframes slideout {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(.7); }
+  }
 .footer-right{
     box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.8);
     background: url('../img/logo.png') no-repeat;
@@ -369,7 +435,12 @@ footer .para{
 }
 footer .para hr{
     background-color: #fff;
+    animation: 3s linear 1s 5 running slidein;
 }
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
 @media (max-width: 414px){
     .footer-left .menus{
         padding: 10px 0;
@@ -381,4 +452,141 @@ footer .para hr{
         padding-top: 20px;
         text-align: center;
     }
+}
+
+.down-footer{
+    background-color: rgb(17, 16, 16);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+.down-footer .col-md-6{
+    padding-top: .5rem;  
+}
+.down-footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0rem .3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.down-footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.down-footer ul li a span{
+    padding: 0px 5px;
+    color: #DB2E00;
+}
+.aboutus{
+    background-color: rgb(207, 206, 206);
+    
+}
+.aboutus .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.aboutus .container h1{
+    padding: 0 3rem;
+    font-weight: bold;
+}
+.aboutus .container h1 span{
+    color: #DB2E00;
+}
+.aboutus .container img{
+    max-width: 400px;
+    max-height: 400px;
+    padding: 0 3rem;
+}
+@media (max-width: 414px){
+    .aboutus .container{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .aboutus .container h1{
+        padding: 0 0rem;
+        
+    }
+    
+    .aboutus .container img{
+        max-width: 400px;
+        max-height: 400px;
+        padding: 0 0rem;
+    }
+}
+.main-content h1{
+    font-weight: bolder;
+}
+.main-content p{
+    color: black;
+}
+.director{
+    background-color: gainsboro;
+}
+.founder{
+    text-align: center;
+   padding: 2rem 2rem;
+}
+.founder i{
+    color: grey;
+}
+.founder i:hover{
+    color: #DB2E00;
+}
+.founder h1{
+    font-weight: bolder;
+}
+.founder .shubham{
+    color: #DB2E00;
+    font-weight: bold;
+}
+.founder .shubham:hover{
+    font-size: 1.5rem;
+}
+.founder .mg{
+    font-weight: bold;
+}
+.contactus{
+    padding: 2rem 2rem;
+}
+.contactus form input{
+    width: 90%;
+    background-color: gainsboro;
+    padding-left: 1rem;
+    border: none;
+    padding: 1rem;
+}
+
+.contactus form textarea{
+    width: 90%;
+    background-color: gainsboro;
+    padding-left: 1rem;
+    border: none;
+    padding: 1rem;
+}
+
+.contactus form p{
+    padding-top: .5rem;
+}
+.contactus button{
+    background-color: #DB2E00;
+    color: #fff;
+    border: none;
+    padding: .5rem .5rem;
+    cursor: pointer;
+}
+.contactus .location h3{
+    font-weight: bold;
 }
