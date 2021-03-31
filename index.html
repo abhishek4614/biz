@@ -14,16 +14,35 @@
   <link rel="stylesheet" href="assets\css\all.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <script src="assets\js\script.js"></script>
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
   <title>Bizfix</title>
+<style>
+ 
 
+#navbar {
+  overflow: hidden;
+  
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+}
+
+</style>
+  </head>
 <body>
 
-  <header class="homepage-head">
+  <header class="homepage-head header" id="banner">
     <img src="assets\img\heading.png" alt="homepage-heading-image">
+   
   </header>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top " id="navbar" >
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,12 +50,13 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto" data-aos="fade-up"
+      data-aos-duration="6000">
         <li class="nav-item ">
-          <a class="navbar-brand " style="padding: 10px 0px;" href="#"><img src="assets\img\logo.png" alt="logo"></a>
+          <a class="navbar-brand " data-aos="fade-right" data-aos-duration="6000" style="padding: 10px 0px;" href="#"><img src="assets\img\logo.png" alt="logo"></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" style="padding-top: 19px;" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link " style="padding-top: 19px;" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" style="padding-top: 19px;" href="#">SERVICES</a>
@@ -45,7 +65,7 @@
           <a class="nav-link" style="padding-top: 19px;" href="#">CAREERS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="padding-top: 19px;" href="#">CONTACT US</a>
+          <a class="nav-link" style="padding-top: 19px;" href="contact.html">CONTACT US</a>
         </li>
         <li class="nav-item quotes">
           <a class="nav-link " style="padding-top: 19px; color: white;" href="#"> GET A FREE QUOTES <i
@@ -55,6 +75,7 @@
 
     </div>
   </nav>
+
   <div class="container-fluid about-heading">
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-12">
@@ -87,7 +108,7 @@
     <div class="bg-white py-2">
 
       <div class="row align-items-center mb-5">
-        <div class="col-lg-6 order-2 order-lg-1">
+        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="6000">
           <h4 class="about-heading">About BizFix</h4>
           <h2 class="font-weight-light">Customised solutions for all
             your business problems.</h2>
@@ -100,7 +121,7 @@
             able to balance in your successful business.</p><a href="#"
             class="btn btn-dark px-5 rounded-pill shadow-sm">Read More</a>
         </div>
-        <div class="col-lg-5 px-2 mx-auto order-1 order-lg-2 about-img"><img src="assets\img\main-0.png" alt=""
+        <div class="col-lg-5 px-2 mx-auto order-1 order-lg-2 about-img " data-aos="fade-left" data-aos-easing="linear" data-aos-duration="6000"><img src="assets\img\main-0.png" alt=""
             class="img-fluid  mb-lg-0"></div>
       </div>
 
@@ -109,26 +130,26 @@
 
   <!-- Start Fixed Background IMG -->
   <div class="plans">
-    <div class="fixed-background">
+    <div class="fixed-background counts" id="counts">
       <div class="container">
-        <div class="row">
+        <div class="row counters">
           <div class="col-md-4 ">
-            <img src="assets\img\main-pic-0.png" alt="">
+            <img class="plans-img" src="assets\img\main-pic-0.png" alt="">
 
-            <p class="sucess-p">Over 11 years in
+            <p class="sucess-p">Over <span class="counter-1" data-from="0" data-to="11" data-time="5000"></span>  years in
               Business</p>
           </div>
           <div class="col-md-4 ">
-            <img src="assets\img\main-pic-1.png" alt="">
+            <img class="plans-img" src="assets\img\main-pic-1.png" alt="">
 
-            <p class="sucess-p">Over 11 years in
+            <p class="sucess-p">Over <span class="counter-2" data-from="0" data-to="11" data-time="5000"></span> years in
               Business</p>
           </div>
           <div class="col-md-4 ">
-            <img src="assets\img\main-pic-2.png" alt="">
+            <img class="plans-img" src="assets\img\main-pic-2.png" alt="">
 
             <p class="sucess-p">Available in
-              4 cities</p>
+              <span class="counter-3" data-from="-4" data-to="4" data-time="5000"></span> cities</p>
           </div>
 
         </div>
@@ -145,7 +166,7 @@
     <div class="bg-white py-2">
 
       <div class="row align-items-center mb-5">
-        <div class="col-lg-6 order-2 order-lg-1">
+        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="6000">
           <h2 class="font-weight-light">Our Philosophy</h2>
           <p class="font-italic text-muted mb-4">Start-up! This word has become the most trending concept over the years
             now. Great minds are converting their ideas to
@@ -154,12 +175,12 @@
             A small crack in any of these attributes might make the business take a wrong turn. Fixing those
             cracks is the work of BIZFIX.</p><a href="#" class="btn btn-dark px-5 rounded-pill shadow-sm">Read More</a>
         </div>
-        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="assets\img\main-1.png" alt=""
+        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2" data-aos="fade-left" data-aos-duration="6000"><img src="assets\img\main-1.png" alt=""
             class="img-fluid mb-4 mb-lg-0"></div>
       </div>
       <div class="row align-items-center">
-        <div class="col-lg-5 px-5 mx-auto"><img src="assets\img\main-2.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-        <div class="col-lg-6">
+        <div class="col-lg-5 px-5 mx-auto " data-aos="fade-right" data-aos-duration="6000"><img src="assets\img\main-2.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="6000">
           <h2 class="font-weight-light">How We Work</h2>
           <p class="font-italic text-muted mb-4">
             Start-up! This word has become the most trending concept over the years now. Great minds are converting
@@ -175,7 +196,7 @@
   </div>
 
 
-  <div class="industry mt-5">
+  <div class="industry">
     <div class="fixed-background">
       <div class="container">
         <div class="row">
@@ -223,7 +244,7 @@
     </div>
   </div>
 
-  <div class="portfolio ">
+  <!-- <div class="portfolio ">
     <h1 class="text-center head">Portfolio</h1>
       
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -269,7 +290,7 @@
       </div>
     
     
-  </div>
+  </div> -->
 
 <div class="project">
   <div class="content">
@@ -285,10 +306,10 @@
         <div class="container menus">
           <ul>
             <img src="assets\img\logo.png" alt="">
-            <li><a href="">ABOUT US</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
             <li><a href="">OUR SERVICES</a></li>
             <li><a href="">JOIN OUT TEAM</a></li>
-            <li><a href="">CONTACT US</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
             
           </ul>
         </div>
@@ -327,6 +348,20 @@
   
 </footer>
 
+<div class="down-footer">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">© 2020 Bizfix. All Rights reserved.</div>
+    <div class="col-md-6 col-sm-12">
+      <ul>
+        <li><a href="">Privacy Policy <span>|</span> </a></li>
+        <li><a href="">Terms and Conditions <span>|</span> </a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="cylon_eye"></div>
+</div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -340,6 +375,13 @@
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets\js\script.js"></script>
+  
+  <script>
+    AOS.init();
   </script>
 </body>
 
